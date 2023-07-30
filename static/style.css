@@ -1,0 +1,443 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}   
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-image: url("back.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    display: grid;
+}
+nav{
+    background-color: rgb(24, 25, 27);
+    height: 80px;
+    width: 100%;
+}
+label.logo{
+    color: white;
+    font-size: 45px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float: right;
+    margin: 20px;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 5px;
+}
+nav ul li a{
+    color: aliceblue;
+    font-size: 17px;
+}
+a.active,a:hover{
+    background-color: rgb(80, 155, 220);   
+}
+.Box1{
+    max-width: 1000px;
+    position: relative;
+    display: block;
+    margin-top: 25%;
+    left: 50%;
+    background: black;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 3rem 6rem black;
+    border-radius: 20px;
+    padding: 20px;
+}
+.Box1 h2{
+    color: aliceblue;
+}
+.Box1 h3{
+    color: aliceblue;
+}
+.Box1 img{
+    max-width: 300px;
+    float: right;
+    border-radius: 15px;
+    margin-left: 15px;
+}
+.ind-sub{
+    float: right;
+    margin-top: 20px;
+    width: 70px;
+    border-radius: 10px;
+    height: 30px;
+}
+.output1{
+    max-width: 950px;
+    height: 100px;
+    padding: 20px;
+    color: white;
+}
+.text{
+    width: 950px;
+    height: 200px;
+    background: white;
+    margin-top: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+button{
+    border-radius: 5px;
+    width: 60px;
+    height: 30px;
+    margin-top: 20px;
+    float: right;
+}
+.file{
+    background-color: black;
+    width: 50%;
+    margin-left: 30px;
+    height: 300px;
+    border-radius: 15px;
+    position: relative;
+}
+.file h2{
+    color: white;
+    margin-left:15px;
+    margin-top: 15px;
+}
+.file-box{
+    width: 300px;
+    float: right;
+}
+.file-box p{
+    color: white;
+    float: right;
+    margin-right: 20px;
+    font-size: larger;
+}
+.upload-box{
+    background: white;
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 350px;
+    font-size: 16px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px black;
+}
+::-webkit-file-upload-button{
+    color: white;
+    background: rgb(50, 47, 47);
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 1px 0 1px grey;
+}
+.upload-btn{
+    float: left;
+    margin-left: 300px;
+    margin-top: 20px;
+    width: 70px;
+    border-radius: 10px;
+    height: 30px;
+}
+.camera{
+    background-color: black;
+    width: 50%;
+    float: right;
+    margin-left: 45%;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-top: 50px;
+    height: 300px;
+    border-radius: 15px;
+    position: relative;
+
+}
+.camera h1{
+    color: white;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.cam-box1{
+    width: 400px;
+    float: left;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.cam-box1 p{
+    color: white;
+    float: right;
+    margin-right: 20px;
+    font-size: larger;
+}
+.cam-box2{
+    width: 300px;
+    float: right;
+    margin-left: 20px;
+}
+.cam-btn{
+    font-size: medium;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    width: 200px;
+    height: 40px;
+    margin-right: 50px;
+    margin-top: 60px;
+}
+.cam-sub{
+    margin-top: 20px;
+    float: right; 
+    margin-left: 200px;
+    margin-bottom: 90px;
+    margin-right: 40px;
+    width: 70px;
+    border-radius: 10px;
+    height: 30px;
+}
+.grid{
+    display: grid;
+    width: 1500px;
+    grid-gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+.grid-item{
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3rem 6rem black;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.grid-item:hover{
+    transform:translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgba(0,0,0,0.5);
+}
+.card-img{
+    display: block;
+    width: 100%;
+    height: 20rem;
+    object-fit: fill;
+}
+.card-content{
+    padding: 5px;
+}
+.card-header{
+    font-size: 18px;
+    color: white;
+    margin-bottom: 1rem;
+}
+.card-text{
+    font-size: 16px;
+    color: white;
+    margin-bottom: 2.5rem;
+}
+.card-btn{
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+.ab1{
+    background: black;
+    color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 30px;
+    border-radius: 30px;
+    padding: 20px;
+}
+.ab2{
+    background: black;
+    color: white;
+    margin-top: 30px;
+    text-align: center;
+    height: 50px;
+}
+.ab-header{
+    color: white;
+    margin-left: 50px;
+    margin-top: 50px;
+    font-size: x-large;
+}
+.contact{
+    margin-top: 30px;
+    margin-left: 300px;
+    margin-right: 50px;
+    font-size: x-large;
+    background: #000000;
+    color: white;
+    width: fit-content;
+    border-radius: 20px;
+    margin-bottom: 30px;
+}
+.contact h1{
+    margin-left: 30px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.con-labels{
+    display: flex;
+}
+.con-box1{
+    width: 30px;
+    height: 500px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+.con-box2{
+    width: 500px;
+    height: 100px;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-left: 150px;
+}
+.con{
+    height: 50px;
+    width: 500px;
+    border-radius: 50px;
+    font-size: 14px;
+    padding: 20px;
+}
+.message{
+    height: 100px;
+    width: 500px;
+    border-radius: 60px;
+    font-size: 14px;
+    padding: 20px;
+}
+.con-btn{
+    float: left;
+    margin-left: 600px;
+    font-size: medium;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: white;
+    color: black;
+    width: 100px;
+    height: 40px;
+    margin-right: 50px;
+    margin-top: 60px;
+}
+.con-img{
+    width: 30px;
+    height: 100px;
+}
+.Feed-head{
+    margin-top: 30px;
+    margin-left: 30px;
+    color: white;
+    font-size: 24px;
+}
+.rating{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-left: 400px;
+    margin-top: 100px;
+    width: fit-content;
+    background: black;
+    height: 200px;
+}
+.rating img{
+    width: 100px;
+    margin-top: 20px;
+}
+.rating input{
+    display: none;
+}
+.rating label{
+    position: relative;
+    width: 0;
+    height: 128px;
+    cursor: pointer;
+    transition: 0.5s;
+    filter: grayscale(1);
+    text-align: center;
+    opacity: 0;
+}
+.rating:hover label{
+    width: 160px;
+    opacity: 0.2;
+}
+.rating input:hover + label,
+.rating input:checked + label{
+    filter: grayscale(0);
+    opacity: 1;
+    width: 160px;
+}
+.rating label h4{
+    color: white;
+    font-size: 24px;
+    padding-top: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translate(-50px) scale(0);
+    transition: 0.5s;
+    font-weight: bold;
+}
+.rating input:hover + label h4,
+.rating input:checked + label h4{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.feedback{
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translate(-50%);
+    color: white;
+    width: 500px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 36px;
+}
+.upload-box1{
+    background: white;
+    border-radius: 30px;
+    width: 500px;
+}
+.suggestions{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    background: black;
+    display: flex;
+    width: 600px;
+    height: 200px;
+}
+.sug-box1{
+    width: 300px;
+    float: left;
+}
+.sug-box1 h2{
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.sug-box1 p{
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.sug-box2{
+    width: 200px;
+    float: right;
+}
+.sug-btn{
+    width: 200px;
+    height: 60px;
+    margin-top: 60px;
+    margin-right: 30px;
+}

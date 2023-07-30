@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tolk</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<nav>
+    <label class="logo">Tolk</label>
+    <ul>
+        <li><a href="{% url 'home' %}">HOME</a></li>
+        <li><a href="{% url 'about' %}">ABOUT</a></li>
+        <li><a href="{% url 'service' %}">SERVICES</a></li>
+        <li><a href="{% url 'contact' %}">CONTACT</a></li>
+        <li><a href="{% url 'feed' %}">FEEDBACK</a></li>
+    </ul>
+</nav>
+<body>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

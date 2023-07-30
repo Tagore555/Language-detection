@@ -1,0 +1,112 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class="Box1">
+    <img src="/static/sideimg.jpeg">
+    <h2>Welcome to Tolk!</h2>
+    <br>
+    <h3>Unleashing the Power of Language detection
+    <br>
+    <br>
+    Are you ready to explore the diverse world of languages at your fingertips? 
+    <br>
+    <br>
+    Say hello to Tolk, your ultimate destination for accurate and efficient language detection!
+    <br>
+    <br>
+       Tolk is a cutting-edge language detection tool designed to identify and analyze the languages present in any text or document.
+    </h3>
+    <form  method="GET">
+        {% csrf_token %}
+        <input type="text" class="text"  name="language" placeholder="Type Something.... to detect" />
+        <br>
+        <input type="submit" class="ind-sub"/>
+        <br><br>
+    </form>
+    <div class="output1">
+        {% if text %}
+        <h2>Language detected is..{{prediction}}</h2>
+        {% endif %}
+    </div>
+</div>
+<div class="file">
+    <h2>Import File</h2>
+    <div class="file-box">
+        <p>Import a text file i.e file with .pdf extension</p>
+        <br>
+        <p> to detect language of content present in it</p>
+    </div>
+    <form  method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="lang" class="upload-box">
+        <br>
+        <input type="submit" value="Upload"  class="upload-btn">
+        <br><br>
+    </form>
+    <div class="output1">
+        {% if content %}
+        <h2>Language detected is.. {{ content }}</h2>
+        {% endif %}
+    </div>
+</div>
+<div class="camera">
+    <h1>Capute text</h1>
+    <div class="cam-box1">
+        <p>Access camera to capture image of text it can be hand written or typed text click on click here button to get camera access</p>
+    </div>
+    <div class="cam-box2">
+        <button class="cam-btn">Click here</button>
+        <br>
+        <input type="Submit" class="cam-sub">
+    </div>
+</div>
+
+<div class="grid">
+    <div class="grid-item">
+        <div class="card">
+            <img class="card-img" src="/static/aboutus.jpg" alt="About Us">
+            <div class="card-content">
+                <h1 class="card-header">About Us</h1>
+                <p class="card-text">
+                    At Tolk, we aim to break down language barriers by aproviding a simple and efficient language detection service.
+                </p>
+                <button class="card-btn"  ><a href="{% url 'about' %}">Read more <span>&rarr;</span></a></button>
+            </div>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="card">
+            <img class="card-img" src="/static/serve.jpeg" alt="Services">
+            <div class="card-content">
+                <h1 class="card-header">Services</h1>
+                <p class="card-text">
+                    At Tolk, we offer a range of language detection services to cater to various needs.Our algorithms are designed to identify language of text.
+                </p>
+                <button class="card-btn"  ><a href="{% url 'service' %}">Read more <span>&rarr;</span></a></button>
+            </div>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="card">
+            <img class="card-img" src="/static/contact.png" alt="Contact Details">
+            <div class="card-content">
+                <h1 class="card-header">Contact Details</h1>
+                <p class="card-text">
+                    We love hearing from our users! If you have any questions, suggestions for improving our language detection service.</p>
+                <button class="card-btn"  ><a href="{% url 'contact' %}">Read more <span>&rarr;</span></a></button>
+            </div>
+        </div>
+    </div>
+    <div class="grid-item">
+        <div class="card">
+            <img class="card-img" src="/static/feedback.jpeg" alt="Feedback">
+            <div class="card-content">
+                <h1 class="card-header">Feedback</h1>
+                <p class="card-text">
+                    Feel free to share your feedback for improving our language detection service,through the feedback section on our website.
+                </p>
+                <button class="card-btn"  ><a href="{% url 'feed' %}">Read more <span>&rarr;</span></a></button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

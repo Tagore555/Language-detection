@@ -1,0 +1,74 @@
+{% extends 'main.html' %}
+{% block content %}
+        <div class="Feed-head">
+            <h1>Feedback</h1>
+        </div>
+        <div class="rating">
+            <input type="radio" name="star" id="star1" checked="checked">
+            <label for="star1">
+                <img src="/static/happy.png">
+                <h4>Loved it</h4>
+            </label>
+            <input type="radio" name="star" id="star2">
+            <label for="star2">
+                <img src="/static/happy (1).png">
+                <h4>Liked it</h4>
+            </label>
+            <input type="radio" name="star" id="star3">
+            <label for="star3">
+                <img src="/static/happy (2).png">
+                <h4>It's ok</h4>
+            </label>
+            <input type="radio" name="star" id="star4">
+            <label for="star4">
+                <img src="/static/sad (1).png">
+                <h4>Dislike</h4>
+            </label>
+            <input type="radio" name="star" id="star5">
+            <label for="star5">
+                <img src="/static/sad.png">
+                <h4>Hated it</h4>
+            </label>
+            <h2 class="feedback">Rate our website</h2>
+        </div>   
+        <div class="suggestions">
+            <div class="sug-box1">
+                <h2>I can do better!</h2>
+                <p>Get in touch if you think you can improve any of these these applications
+                </p>
+            </div>
+            <div class="sug-box2"></div>
+            <form method="get">
+                <button class="sug-btn" name="sub" value="sub" type="submit">Get in touch</button>
+            </form>
+            </div>
+        </div>
+        {% if v %}
+        <div class="contact">
+            <h1>Suggestions</h1>
+            <div class="con-labels">
+                <div class="con-box1">
+                    <label class="label">Name</label><br><br><br><br>
+                    <label class="label">Email</label><br><br><br><br>
+                    <label class="label">Upload files</label><br><br><br><br>
+                    <label class="label">Message</label><br><br><br>
+                </div>    
+                <form action="https://formspree.io/f/mgejookv" method="POST">
+                <div class="con-box2">
+                    <input type="text" class="con" placeholder="Name" name="Name" required>
+                </div>
+                <div class="con-box2">
+                    <input type="email" class="con" placeholder="Email" name="Email" required>
+                </div> 
+                <div class="con-box2">
+                    <input type="file" class="upload-box1" name="File">
+                </div>
+                <div class="con-box2">
+                    <textarea class="message" placeholder="Message" name="Message" required></textarea>
+                </div class="con-box2">
+                <button class="con-btn" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+{% endblock content %}

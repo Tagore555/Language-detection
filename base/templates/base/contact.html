@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+{% block content %}
+        <div class="contact">
+            <h1>Contact our team</h1>
+            <div class="con-labels">
+                <div class="con-box1">
+                    <label class="label">Name</label><br><br><br><br>
+                    <label class="label">Email</label><br><br><br><br>
+                    <label class="label">Subject</label><br><br><br><br>
+                    <label class="label">Message</label><br><br><br><br>
+                </div>    
+                <form action="https://formspree.io/f/mdorakpr" method="POST">
+                <div class="con-box2">
+                    <input type="text" class="con" placeholder="Name" name="Name" required>
+                </div>
+                <div class="con-box2">
+                    <input type="email" class="con" placeholder="Email" name="Email" required>
+                </div> 
+                <div class="con-box2">
+                    <input type="text" class="con" placeholder="Subject" name="Subject">
+                </div>
+                <div class="con-box2">
+                    <textarea class="message" placeholder="Message" name="Message"></textarea>
+                </div class="con-box2">
+                    <button class="con-btn" type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+{% endblock content %}
